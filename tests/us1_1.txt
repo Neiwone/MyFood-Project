@@ -21,7 +21,7 @@
 # descrição: Apaga todos os dados no banco de dados do sistema.
 # retorno: Sem retorno
 #
-# getAtributoUsuario(int: id, String: nome)
+# getAtributoUsuario(int:id, String nome)
 # descrição: Obtém os dados de um usuário.
 # retorno: Uma String com o valor do atributo.
 #
@@ -29,7 +29,7 @@
 # descrição: Cria um usuário do tipo cliente.
 # retorno: Sem retorno
 #
-# criarUsuario(String: nome, String: email, String: senha, String: endereco, String: cpf)
+# criarUsuario(String: nome, String: email, String: senha, String: endereco ,String: cpf)
 # descrição:Cria um usuário do tipo dono de restaurante.
 # retorno: Sem retorno
 #

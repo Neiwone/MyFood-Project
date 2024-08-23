@@ -1,23 +1,28 @@
-import easyaccept.EasyAccept;
+import br.ufal.ic.p2.myfood.Facade;
+import easyaccept.EasyAcceptFacade;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        String facade = "br.ufal.ic.p2.myfood.Facade";
-        // First milestone
-        EasyAccept.main(new String[]{facade, "tests/us1_1.txt"});
-        EasyAccept.main(new String[]{facade, "tests/us1_2.txt"});
-        EasyAccept.main(new String[]{facade, "tests/us2_1.txt"});
-        EasyAccept.main(new String[]{facade, "tests/us2_2.txt"});
-        EasyAccept.main(new String[]{facade, "tests/us3_1.txt"});
-        EasyAccept.main(new String[]{facade, "tests/us3_2.txt"});
-        EasyAccept.main(new String[]{facade, "tests/us4_1.txt"});
-        EasyAccept.main(new String[]{facade, "tests/us4_2.txt"});
+        List<String> tests = new ArrayList<>();
 
-        // Second milestone
-//        EasyAccept.main(new String[]{facade, "tests/us8.txt"});
-//        EasyAccept.main(new String[]{facade, "tests/us9.txt"});
-//        EasyAccept.main(new String[]{facade, "tests/us9_1.txt"});
-//        EasyAccept.main(new String[]{facade, "tests/us10.txt"});
-//        EasyAccept.main(new String[]{facade, "tests/us10_1.txt"});
+        tests.add("tests/us1_1.txt");
+        tests.add("tests/us1_2.txt");
+        tests.add("tests/us2_2.txt");
+        tests.add("tests/us2_2.txt");
+        tests.add("tests/us3_1.txt");
+        tests.add("tests/us3_2.txt");
+        tests.add("tests/us4_1.txt");
+        tests.add("tests/us4_2.txt");
+
+        EasyAcceptFacade eaFacade = new EasyAcceptFacade(new Facade(), tests);
+
+        // Execute the tests
+        eaFacade.executeTests();
+
+        // Print the tests execution results
+        System.out.println(eaFacade.getCompleteResults());
     }
 }
